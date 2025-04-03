@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <style>
+        body {
+            background: linear-gradient(109.6deg, rgb(240, 228, 122) 11.2%, rgb(253, 145, 212) 54.5%, rgb(176, 222, 234) 99.6%);
+        }
+
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            color: #003092;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 25px;
+            color: #00879E;
+            font-family: cursive;
+            margin: 0 auto;
+            padding: 15px;
+            border: 1px solid #A6F1E0;
+            border-radius: 4px;
+        }
+
+        .chemistry {
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            border-radius: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 18px;
+            margin: 0 auto;
+            padding: 20px 0 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px 60px;
+        }
+
+        .more-info {
+            color: ;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .more-info:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            display: block;
+            margin: 15px auto;
+            padding: 15px 20px;
+            background: #7886C7;
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>🎶 <br />Music is life</h1>
+
+        <h2>What does music mean to you?</h2>
+
+        <hr>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/345/original/gettyimages-155394693-resize-81ac1e68a3fc61fde595c66eef24f72e459d394d.jpg?1740138677"
+            alt="Music" /> <br />
+
+        Music therapy can help <em>improve mood, <strong>reduce stress</strong> , and promote social bonding</em> .
+        This
+        is due to the way
+        music affects
+        brain chemistry and the release of <span class="chemistry">neurotransmitters and hormones.</span>
+        </hr>
+
+        <a href="https://www.ohio.edu/news/2024/07/what-makes-music-therapy-effective#:~:text=Research%20in%20neuroscience%20has%20shown,mood%20regulation%20and%20stress%20reduction."
+            target="_blank" class="more-info"> <br /> Learn more on Ohio University news page</a>
+        <button class="open-button">Open Spotify account 🎼</button>
+
+        <p class="footer">This page was coded by Cherozade Bhayat</p>
+    </div>
+
+    <script>
+        function userDetails() {
+            let firstName = prompt("Please enter your name");
+            let age = prompt("How old are you?");
+            let email = prompt("Please enter your email address");
+
+
+            if (age >= 18) {
+                alert("Welcome " + firstName + "! You will receive an email shortly");
+            } else {
+                let h1 = document.querySelector("h1");
+                h1.innerHTML = "Sorry " + firstName + ", You cannot sign up yet! 😣";
+            }
+        }
+
+        let openButton = document.querySelector(".open-button");
+
+        openButton.addEventListener("click", userDetails);
+
+    </script>
+</body>
+
+</html>

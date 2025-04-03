@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet</title>
+
+    <style>
+        body {
+            background: linear-gradient(101.9deg, rgb(253, 183, 220) 25%, rgb(240, 213, 190) 38.1%, rgb(249, 240, 206) 55.5%, rgb(253, 244, 210) 67.3%, rgb(222, 248, 226) 85.2%, rgb(200, 247, 242) 103.6%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .content {
+            max-width: 600px;
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .theme {
+            font-size: 12px;
+            background: black;
+            color: white;
+            padding: 5px 8px;
+            border: none;
+        }
+
+        .theme:hover {
+            background: white;
+            color: black;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid turquoise;
+            background: white;
+            font-size: 20px;
+            border-radius: 7px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            background: turquoise;
+            color: white;
+            cursor: pointer;
+        }
+
+        .crochet-patterns {
+            border-radius: 12px;
+            transition: all 200ms ease-in-out;
+        }
+
+        .crochet-patterns:hover {
+            filter: contrast(50%);
+            transform: scale(1.1);
+        }
+
+        a {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .grid img {
+            width: 300px;
+            border-radius: 10px;
+            aspect-ratio: 3/4;
+            transition: all 200ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(1.2);
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .beginners a {
+            text-decoration: none;
+        }
+
+        .learn {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgb(47, 202, 86);
+            background: white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .learn:hover {
+            background: rgb(47, 202, 86);
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            color: #690B22;
+            font-size: 18px;
+        }
+
+        .dark-theme {
+            background: linear-gradient(89.7deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 88.8%);
+            color: white;
+        }
+
+        .dark-theme a {
+            color: #9c13d3;
+        }
+
+        .dark-theme .content {
+            background: #3C3D37;
+        }
+    </style>
+
+    <button class="theme">Change theme</button>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Crochet</h1>
+        <h2>The Art of Crochet 🧶</h2>
+
+        <a href="https://www.lovecrafts.com/en-gb/l/crochet/crochet-patterns/free-crochet-patterns?srsltid=AfmBOoryi2lfa2yRMozpjzlqFIvA4mO8A1vaAQ-EglQ1qamM1FTohiHI"
+            target="_blank"> Crochet patterns<br />
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/484/original/maxresdefault.jpg?1741296194"
+                alt="" class="crochet-patterns" />
+        </a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/482/original/rainbow-harmony-blanket-6-sq.jpg?1741296176"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/481/original/roundbasket.jpg?1741296153"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/485/original/f0c5dc1941488d28a3c9bf974c2dd447.jpg?1741296208"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/486/original/AnimalSpreadFeatured_2048x.jpg?1741296219"
+                alt="" />
+        </div>
+        <p>
+            Crochet is a process of creating textiles by using a crochet hook to interlock loops of yarn, thread, or
+            strands
+            of
+            other materials. The name is derived from the French term crochet, which means 'hook'. Hooks can be made
+            from
+            different
+            materials, sizes, and types.
+        </p>
+
+        <button class="beginners">
+            <a href="https://www.youtube.com/watch?v=GcOzdAzmtNM" target="_blank" alt="">Crochet for beginners
+            </a>
+        </button> <br />
+
+        <button class="learn">Learn to crochet!</button>
+    </div>
+    <footer>Coded by Cherozade Bhayat</footer>
+
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("dark-theme")) {
+                body.classList.remove("dark-theme");
+            } else {
+                body.classList.add("dark-theme");
+            }
+
+        }
+        let themeButton = document.querySelector(".theme");
+        themeButton.addEventListener("click", changeTheme);
+
+        function identifyUser() {
+            let name = prompt("What is your name?");
+            let interest = prompt("Are you interested in crocheting?");
+            interest = interest.toLowerCase().trim();
+
+
+            if (interest === "yes") {
+                alert("Hi " + name + "! We're happy you've joined the crochet family! 🧶");
+            } else {
+                alert("We hope you find something you love, " + name + " 💟");
+            }
+        }
+        let beginnerButton = document.querySelector("button.learn");
+
+        beginnerButton.addEventListener("click", identifyUser);
+
+
+    </script>
+
+</body>
+
+</html>
